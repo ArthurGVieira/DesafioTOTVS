@@ -18,7 +18,7 @@ Ou execute o index da pasta dist em um host local.
 npx http-server dist/angular-project
 ````
 
-Inicialize o APP e procure por **atendente_desafio_bot** no telegram. Todas as mensagens enviadas para esse canal de conversa vão aparecer
+Inicialize o APP e procure pelo usuário **atendente_desafio_bot** no telegram. Todas as mensagens enviadas para esse canal de conversa vão aparecer
 no APP.
 
 ## Funcionalidades
