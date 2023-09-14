@@ -1,0 +1,76 @@
+<app-body>
+    <div @fadeInOut class="main" *ngIf="!conversa_aberta && !cadastro">
+        <div class="top">
+            <img src="./assets/person.png" alt="person" class="person">
+            Nome do atendente
+        </div>
+        <div class="options">
+            <div class="conversas" (click)="mudar_select($event)" [ngStyle]="{ 'background-color': corConversas }">
+                <p class="centraliza">Conversas</p>
+            </div>
+            <div class="contatos" (click)="mudar_select($event)" [ngStyle]="{ 'background-color': corContatos }">
+                <p class="centraliza">Contatos</p>
+            </div>
+        </div>
+        <div class="lista_conversas" *ngIf="select == 'Conversas'">
+            <ul>
+                <li *ngFor="let conversa of conversas">
+                    <div class="contato" [id]="conversa.id" (click)="abrir_conversa($event)">
+                        <img src="./assets/person.png" alt="person" style="margin-bottom: 15px; margin-left: 10px; margin-right: 15px; height: 55px;" [id]="conversa.id">
+                        {{conversa.nome}}
+                        <div *ngIf="!conversa.mensagens[conversa.mensagens.length - 1][2]" class="notificacao">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="lista_conversas" *ngIf="select == 'Contatos'">
+            <ul>
+                <li *ngFor="let contato of contatos">
+                    <div class="contato" [id]="contato.id" (click)="abrir_conversa($event)">
+                        <img src="./assets/person.png" alt="person" style="margin-bottom: 15px; margin-left: 10px; margin-right: 15px; height: 55px;" [id]="contato.id">
+                        {{contato.nome}}
+                    </div>
+                    <p style="margin-left: 30px;">Chat ID: {{ contato.id }}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="add_contato" (click)="cadastrar_contato()">
+            <img src="./assets/plus.png" alt="plus" class="plus">
+        </div>
+    </div>
+    <div class="conversa" *ngIf="conversa_aberta && !cadastro" @fadeInOut>
+        <p>Chat ID: {{ conversa_aberta_obj.id }}</p>
+        <div class="conversa_top">
+            <div class="voltar_home" (click)="fechar_conversa()">
+                <img src="./assets/return.png" alt="return" class="return">
+            </div>
+            {{ conversa_aberta_obj.nome }}
+        </div>
+        <div class="conversa_msg">
+            <ul>
+                <li *ngFor="let msg of conversa_aberta_obj.mensagens">
+                    <div [ngClass]="{'msg_direita': msg[1], 'msg_esquerda': !msg[1]}" *ngIf="msg[0] != ''">
+                        <p class="conteudo_msg">{{ msg[0] }}</p>
+                    </div>
+            </ul>
+        </div>
+        <div class="enviar_msg">
+            <input type="text" placeholder="Digite sua mensagem" [(ngModel)]="mensagem_text" class="input_msg">
+            <button mat-raised-button color="primary" (click)="enviar_msg()" class="send_button">Enviar</button>
+        </div>
+    </div>
+    <div class="cadastro" @fadeInOut *ngIf="cadastro">
+        <div class="voltar_home" (click)="fechar_cadastro()" style="margin-bottom: 50px;">
+            <img src="./assets/return.png" alt="return" class="return">
+        </div>
+        <p class="cadastro_titulo">Adicionar Novo Contato</p>
+        <div class="cadastro_area">
+            <p>Digite o nome do usuário</p>
+            <input class="cadastro_input" [(ngModel)]="nome_new_user">
+            <p>Digite o ID do chat do telegram</p>
+            <input class="cadastro_input" [(ngModel)]="id_chat_new_user">
+        </div>
+        <button mat-raised-button color="primary" (click)="realizar_cadastro()" class="cadastro_botao">Cadastrar</button>
+      </div>
+</app-body>

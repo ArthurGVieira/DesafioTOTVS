@@ -1,0 +1,28 @@
+<app-body>
+    <div class="init" *ngIf="!enviar" @fadeInOut>
+        <h1>TeleChat</h1>
+        <p class="top">Informe seu número de telefone para enviarmos o código de acesso.</p>
+        <div class="margem">
+            <div class="entrada">
+                <img src="./assets/phone.png" alt="phone" class="phone">
+                <p class="down">+55</p>
+                <input type="tel" pattern="[0-9]{10}" placeholder="Celular" maxlength="11" class="tel">
+            </div>
+        </div>
+        <button mat-raised-button color="primary" (click)="enviarNum()" class="enviar">Enviar</button>
+    </div>
+    <div class="init" *ngIf="enviar" @fadeInOut>
+        <h1>TeleChat</h1>
+        <p class="top">Digite o código recebido</p>
+        <div>
+            <input type="text" class="cod" maxlength="1">
+            <input type="text" class="cod" maxlength="1">
+            <input type="text" class="cod" maxlength="1">
+            <input type="text" class="cod" maxlength="1">
+            <input type="text" class="cod" maxlength="1">
+            <input type="text" class="cod" maxlength="1">
+        </div>
+        <p (click)="enviarNum()" class="receber_cod">Receber o código novamente</p>
+        <button mat-raised-button color="primary" class="entrar" routerLink="/home">Entrar</button>
+    </div>
+</app-body>

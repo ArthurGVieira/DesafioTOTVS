@@ -1,0 +1,318 @@
+.main {
+    position: absolute;
+}
+
+.top {
+    width: 350px;
+    height: 60px;
+    background-color: #4054b4;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(210, 210, 210, 0.5); 
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 1000;   
+}
+
+.person {
+    margin-bottom: 15px;
+}
+
+.options {
+    width: 350px;
+    height: 45px;
+    margin-top: 25px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(210, 210, 210, 0.5);
+}
+
+.centraliza {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+.conversas {
+    margin-right: 10px;
+    width: 160px;
+    height: 35px;
+    background-color: #4054b4;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(210, 210, 210, 0.5); 
+    position: relative;
+}
+
+.conversas:hover {
+    cursor: pointer;
+    background-color: #334390;
+}
+
+.contatos {
+    margin-left: 10px;
+    width: 160px;
+    height: 35px;
+    background-color: #4054b4;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(210, 210, 210, 0.5);
+    position: relative;  
+}
+
+.contatos:hover {
+    cursor: pointer;
+    background-color: #334390;
+}
+
+.lista_conversas {
+    display: flex;
+    width: 350px;
+    height: 450px;
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 5px 0px rgba(210, 210, 210, 0.5);
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.lista_conversas::-webkit-scrollbar {
+    width: 0;
+}
+
+.lista_conversas:hover {
+    overflow: auto;
+}
+
+.add_contato {
+    width: 60px;
+    height: 60px;
+    background-color: #4054b4;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus {
+    width: 35px;
+    height: auto;
+}
+
+.add_contato:hover {
+    background-color: #334390;
+    cursor: pointer;
+}
+
+.contato {
+    display: flex;
+    width: 300px;
+    height: 60px;
+    background-color: #ebebeb;
+    border-radius: 20px;    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.notificacao {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 10px;
+}
+
+.conversa {
+    width: 380px;
+    height: 640px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+}
+
+.conversa_top {
+    display: flex;
+    width: 350px;
+    height: 60px;
+    background-color: #4054b4;
+    border-radius: 20px;    
+    margin-bottom: 10px;
+    justify-content: left;
+    align-items: center;
+    font-size: 40px;
+    overflow: hidden;
+}
+
+.voltar_home {
+    display: flex;
+    width: 43px;
+    height: 43px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(42, 42, 42, 0.5);
+    cursor: pointer;
+}
+
+.return {
+    width: 25px;
+    height: auto;
+}
+
+.conversa_msg {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 430px;
+    background-color: #ffffff;
+    border-radius: 20px;    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: top;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(138, 138, 138, 0.5);
+    padding: 10px;
+}
+
+.conversa_msg::-webkit-scrollbar {
+    width: 0;
+}
+
+.conversa_msg:hover {
+    overflow: auto;
+}
+
+.enviar_msg {
+    width: 350px;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(138, 138, 138, 0.5);
+}
+
+.input_msg {
+    width: 190px;
+    background: transparent; 
+    border: none;
+    outline: none;
+    opacity: 80%;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.send_button {
+    margin-left: 20px;
+}
+
+.msg_direita {
+    background-color: #ebebeb;
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 5px;
+    float: left;
+    margin: 5px;
+    word-wrap: break-word;
+}
+
+.msg_esquerda {
+    background-color: #c6cce9;
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+    float: right;
+    margin: 5px;
+    word-wrap: break-word;
+}
+
+.conteudo_msg {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.cadastro {
+    display: flex;
+    width: 350px;
+    height: 450px;
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 5px 5px 0px rgba(210, 210, 210, 0.5);
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 20px;    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: top;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(138, 138, 138, 0.5);
+    padding: 10px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+
+.cadastro_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-bottom: 80px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.cadastro_titulo {
+    margin-bottom: 80px;
+}
+
+.cadastro_input {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cadastro_botao {
+    margin-bottom: 50px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
