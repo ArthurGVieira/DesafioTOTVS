@@ -26,11 +26,16 @@ export class HomeComponent implements OnInit {
 
   select: any = 'Conversas';
   conversa_aberta: boolean = false;
+  // As mensagens no objeto Conversa consistem em uma lista com 3 informações, uma string para 
+  // o texto da mensagem, um número 0 ou 1 para indicar se é uma mensagem do usuário ou do
+  // atendente, e um booleano para indicar se a mensagem ja foi lida pelo atendente ou não.
   conversa_aberta_obj: Conversa = {
     id: 0,
     nome: "0",
     mensagens: [["", 1, false]]
   };
+  // Os atributos id e nome nos objetos Contato e Conversa equivalem ao chat_id do 
+  // usuário que está mandando mensagem e ao seu nome registrado no telegram respectivamente.
   contatos: Contato[] = [];
   conversas: Conversa[] = [];
   data: any;
@@ -43,6 +48,7 @@ export class HomeComponent implements OnInit {
   corContatos: string = "#4054b4";
   update_id: number[] = []
 
+  // Injeção de dependência do data.service dentro do componente home
   constructor(private dataService: DataService) { 
 
   }
@@ -114,7 +120,7 @@ export class HomeComponent implements OnInit {
   //   return false
   // }
 
-  // Usa a lista com os id de updates para checar novas mensagens
+  // Usa a lista com os ids de updates para checar novas mensagens
   checar_nova_msg(): boolean {
     if (!this.update_id.includes(this.data.result[this.data.result.length - 1].update_id)) {
       this.update_id.push(this.data.result[this.data.result.length - 1].update_id)
