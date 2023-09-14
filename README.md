@@ -33,8 +33,8 @@ O projeto consiste em 2 componentes principais que são o INIT e HOME. O compone
 mas apenas de maneira demonstrativa sem nenhuma lógica de autenticação. Já o componente HOME é a parte principal da aplicação onde possui toda a lógica
 e funções necessárias para o envio e recebimento de mensagens via requests do telegram.
 
-**OBSERVAÇÃO:** outra parte da lógica está no data.service que é um objeto de comunicação com a API do telegram e ele que realiza os métodos GET e POST,
-através de uma injeção de depência no arquivo .ts do componente home. O ideal seria que toda a parte de informações e comunicação de dados estivesse
+**OBSERVAÇÃO:** outra parte da lógica está no data.service que é um serviço de comunicação com a API do telegram e ele que realiza os métodos GET e POST,
+através de uma injeção de depência no arquivo .ts do componente HOME. O ideal seria que toda a parte de informações e comunicação de dados estivesse
 dentro desse serviço, porém como esse projeto não requer nenhum nível de segurança e por questões de praticidade, essas informações e suas lógicas
 estão em sua maioria contidas no componente HOME.
 
