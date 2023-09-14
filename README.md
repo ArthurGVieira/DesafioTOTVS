@@ -36,7 +36,7 @@ estão em sua maioria contidas no componente HOME.
 
 ## Imagens
 
-![exemplo](screenshots/0.png "exemplo1")
-![exemplo2](screenshots/1.png "exemplo2")
+Exemplo da aplicação aberta ao lado do telegram.
 
+![exemplo](screenshots/exemplo.png "exemplo1")
 
