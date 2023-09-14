@@ -5,6 +5,7 @@ Esse projeto foi desenvolvido para participar do Desafio do Programador 2023 da 
 ## Descrição
 
 O projeto consiste em uma interface de chatweb integrada com a API do telegram para receber e enviar mensagens para usuários.
+Essa comunicação é feita a partir do usuário **atendente_desafio_bot**.
 
 ## Como usar
 
@@ -16,6 +17,9 @@ Ou execute o index da pasta dist em um host local.
 ````
 npx http-server dist/angular-project
 ````
+
+Inicialize o APP e procure por **atendente_desafio_bot** no telegram. Todas as mensagens enviadas para esse canal de conversa vão aparecer
+no APP.
 
 ## Funcionalidades
 
