@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   cadastro: boolean = false;
   corConversas: string = "#334390";
   corContatos: string = "#4054b4";
-  lista_mensagens_id: number[] = []
+  update_id: number[] = []
 
   constructor(private dataService: DataService) { 
 
@@ -105,9 +105,19 @@ export class HomeComponent implements OnInit {
   }
 
   // Usa a variável last_id para checar novas mensagens
+  // checar_nova_msg(): boolean {
+  //   if (this.data.result[this.data.result.length - 1].message.message_id != this.last_id) {
+  //     this.last_id = this.data.result[this.data.result.length - 1].message.message_id
+  //     console.log('NOVA MENSAGEM')
+  //     return true
+  //   }
+  //   return false
+  // }
+
+  // Usa a lista com os id de updates para checar novas mensagens
   checar_nova_msg(): boolean {
-    if (this.data.result[this.data.result.length - 1].message.message_id != this.last_id) {
-      this.last_id = this.data.result[this.data.result.length - 1].message.message_id
+    if (!this.update_id.includes(this.data.result[this.data.result.length - 1].update_id)) {
+      this.update_id.push(this.data.result[this.data.result.length - 1].update_id)
       console.log('NOVA MENSAGEM')
       return true
     }
