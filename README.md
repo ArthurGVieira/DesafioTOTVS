@@ -13,7 +13,7 @@ Execute os arquivos dentro de um ambiente de desenvolvimento anular
 ````
 ng serve
 ````
-Ou execute o index da pasta dist em um host local.
+Ou execute o index.html da pasta dist em um host local.
 ````
 npx http-server dist/angular-project
 ````
