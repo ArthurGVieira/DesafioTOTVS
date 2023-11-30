@@ -9,7 +9,7 @@ Essa comunicação é feita a partir do usuário **atendente_desafio_bot**.
 
 ## Como usar
 
-Execute os arquivos dentro de um ambiente de desenvolvimento anular
+Execute os arquivos dentro de um ambiente de desenvolvimento angular
 ````
 ng serve
 ````
