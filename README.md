@@ -1,6 +1,6 @@
 # Desafio do Programador TOTVS
 
-Esse projeto foi desenvolvido para participar do Desafio do Programador 2023 da empresa TOTVS.
+Esse projeto foi desenvolvido para participar do Desafio do Programador 2023 da empresa TOTVS usando a framework Angular.
 
 ## Descrição
 
